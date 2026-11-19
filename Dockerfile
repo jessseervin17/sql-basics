@@ -1,0 +1,15 @@
+FROM postgres:15-alpine
+
+WORKDIR /app
+
+COPY . .
+
+ENV POSTGRES_USERS=Gh0st17
+
+ENV POSTGRES_PASSWORD=password
+
+ENV POSTGRES_DB=school
+
+EXPOSE 5432
+
+CMD ["postgres"]
